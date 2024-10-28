@@ -111,7 +111,7 @@
 .categories .row , .products .row {
     gap: 20px;
 }
-.categories .category , .products a {
+.categories .category , .products .product {
     width: 30%;
     padding: 25px;
     text-align: center;
@@ -136,12 +136,13 @@
     font-size: 35px;
     margin-bottom: 50px;
 }
-.products a {
+.products .product {
     background-color: #fff;
     box-shadow: 0 4px 8px rgb(0, 0, 0,.1);
 }
 .products .product img {
     width: 100%;
+    cursor: pointer;
 }
 /***************/
 .pagination-container {
@@ -186,4 +187,59 @@
     color: #ccc;
     cursor: not-allowed;
     border-color: #ddd;
+}
+/*******************/
+.my-modal {
+    background-color: rgb(0, 0, 0,.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-modal .img {
+    padding: 25px 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0,.8);
+    position: relative;
+}
+.my-modal img {
+    width: 400px;
+    margin: 0 1px;
+}
+
+.close-but,
+.left-but,
+.right-but {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgb(0, 0, 0,.75);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.close-but{
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+.left-but{
+    left: 10px;
+    top: 50%;
+}
+.right-but{
+    right: 10px;
+    top: 50%;
+}
+.d-none {
+    display: none;
 }
